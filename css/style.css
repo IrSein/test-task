@@ -1,0 +1,391 @@
+/* CSS переменные */
+:root {
+    /*Цвета*/
+    --black: #000000;
+    --transparent-grey: rgba(23, 23, 23, 50%);
+    --grey: #7C7C7C;
+    --light-grey: #E5E5E5;
+    --white: #ffffff;
+    --yellow: #C9A128;
+    --red: red;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 38px;
+    color: var(--yellow);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+#form {
+    background-color: var(--white);
+    max-width: 769px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 90px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid var(--light-grey);
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-family: inherit;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.input-block div {
+    width: 100%;
+}
+
+.user-agreement>a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.input-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.input-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.input-email--block {
+    margin-bottom: 30px;
+}
+
+.input-select--block {
+    margin-bottom: 30px;
+}
+
+.select-wrap {
+    position: relative;
+    width: 100%;
+}
+
+span {
+    color: var(--red);
+}
+
+input,
+label {
+    display: block;
+}
+
+input[type="text"] {
+    margin-right: 30px;
+}
+
+form input[name="name"] {
+    margin-right: 30px;
+}
+
+.input-wrap label {
+    position: absolute;
+    transition: all 0.2s ease;
+    bottom: 23px;
+    pointer-events: none;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 0 0 17px;
+}
+
+.textarea-wrap label {
+    position: absolute;
+    transition: all 0.2s ease;
+    bottom: 198px;
+    pointer-events: none;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 0 0 17px;
+}
+
+.select-wrap label {
+    position: absolute;
+    transition: all 0.2s ease;
+    bottom: 23px;
+    pointer-events: none;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 0 0 17px;
+}
+
+.input-wrap input {
+    padding: 17px;
+}
+
+.select-wrap select {
+    padding: 17px;
+    position: relative;
+}
+
+#modalClose {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.input-wrap textarea {
+    padding: 17px;
+}
+
+textarea {
+    padding: 17px;
+}
+
+.input-wrap input:focus+label,
+.input-wrap input:not(:placeholder-shown)+label {
+    bottom: 70%;
+    font-size: 10px;
+    margin-top: 10px;
+    color: var(--grey);
+}
+
+textarea:focus+label,
+textarea:not(:placeholder-shown)+label {
+    bottom: 182px;
+    top: 375px;
+    font-size: 10px;
+    margin-top: 10px;
+    color: var(--grey);
+}
+
+.input-wrap textarea:focus+label,
+.input-wrap textarea:not(:placeholder-shown)+label {
+    bottom: 10px;
+    font-size: 10px;
+    margin-top: 15px;
+}
+
+select:focus+label,
+select:not(:placeholder-shown)+label {
+    bottom: 70%;
+    font-size: 10px;
+    margin-top: 10px;
+    color: var(--grey);
+}
+
+.input-name {
+    margin-right: 30px;
+}
+
+#submitBtn {
+    background: var(--yellow);
+    border: 2px solid var(--yellow);
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+    width: 208px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#submitBtn:hover {
+    border: 2px solid var(--yellow);
+    color: var(--yellow);
+    background: none;
+}
+
+.user-agreement {
+    color: var(--transparent-grey);
+    max-width: 268px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.select-img {
+    width: 14px;
+    height: 8px;
+    background: #FFF url("/img/arrow.svg") no-repeat center / cover;
+    position: absolute;
+    right: 15px;
+    content: '';
+    display: block;
+    bottom: 24px;
+}
+
+select {
+    width: 100%;
+    border: 1px solid var(--light-grey);
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-family: inherit;
+    line-height: 24px;
+    color: var(--black);
+    appearance: none;
+}
+
+label[for="tel"]::after {
+    margin-left: 1px;
+    content: "*";
+}
+
+label[for="email"]::after {
+    margin-left: 1px;
+    content: "*";
+}
+
+.user-agreement--block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#modalOverlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    overflow: scroll;
+}
+
+.hidden-modal {
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s ease;
+}
+
+.btn-order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 350px;
+}
+
+#btnOrder {
+    background: var(--yellow);
+    border: 2px solid var(--yellow);
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+    width: 208px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#btnOrder:hover {
+    border: 2px solid var(--yellow);
+    color: var(--yellow);
+    background: none;
+}
+
+#successМessage {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#result {
+    text-align: center;
+}
+
+/*медиазапросы*/
+
+/*desktop 600px*/
+@media (max-width: 600px) {
+    #form {
+        margin: 90px 15px 0;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    .input-block {
+        flex-direction: column;
+        height: 160px;
+    }
+
+    .user-agreement--block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-agreement {
+        margin-bottom: 20px;
+    }
+
+    #submitBtn {
+        width: 100%;
+    }
+
+    .input-wrap input:focus+label,
+    .input-wrap input:not(:placeholder-shown)+label {
+        font-size: 15px;
+    }
+
+    .select-wrap select:focus+label,
+    .select-wrap select:not(:placeholder-shown)+label {
+        font-size: 15px;
+    }
+
+    .textarea-wrap label {
+        bottom: 256px;
+    }
+
+    textarea:focus+label,
+    textarea:not(:placeholder-shown)+label {
+        top: 490px;
+        font-size: 15px;
+    }
+}

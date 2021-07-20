@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Заявка на услугу</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <div class="btn-order">
+            <button onclick='openForm()' id="btnOrder">Заказать услугу</button>
+        </div>
+
+        <div id="modalOverlay" class="hidden-modal">
+            <div id="form" class="form">
+                <div id="modalClose">
+                    <svg
+                        fill="#A6A9AF"
+                        height="15px"
+                        viewBox="0 0 311 311.07733"
+                        width="15px"
+                        xmlns="http://www.w3.org/2000/svg"><path
+                        d="m16.035156 311.078125c-4.097656 0-8.195312-1.558594-11.308594-4.695313-6.25-6.25-6.25-16.382812 0-22.632812l279.0625-279.0625c6.25-6.25 16.382813-6.25 22.632813 0s6.25 16.382812 0 22.636719l-279.058594 279.058593c-3.136719 3.117188-7.234375 4.695313-11.328125 4.695313zm0 0"/><path
+                        d="m295.117188 311.078125c-4.097657 0-8.191407-1.558594-11.308594-4.695313l-279.082032-279.058593c-6.25-6.253907-6.25-16.386719 0-22.636719s16.382813-6.25 22.636719 0l279.058594 279.0625c6.25 6.25 6.25 16.382812 0 22.632812-3.136719 3.117188-7.230469 4.695313-11.304687 4.695313zm0 0"/></svg>
+                </div>
+                <h1>заявка на услугу</h1>
+                <form method="POST" id="formFeedback" action="">
+                    <div class="input-block">
+                        <div class="input-name">
+                            <div class="input-wrap">
+                                <input type="text" name="name" id="name" placeholder=" "/>
+                                <label for="name">Ваше имя</label>
+                            </div>
+                            <span id="validateName"></span>
+                        </div>
+                        <div class="input-tel">
+                            <div class="input-wrap">
+                                <input type="tel" name="phone" id="phone" placeholder=" " required/>
+                                <label for="tel">Телефон</label>
+                            </div>
+                            <span id="validatePhone"></span>
+                        </div>
+                    </div>
+                    <div class="input-email--block">
+                        <div class="input-wrap input-email">
+                            <input type="email" name="email" id="email" placeholder=" " required/>
+                            <label for="email">E-mail</label>
+                        </div>
+                        <span id="validateEmail"></span>
+                    </div>
+                    <div class="input-select--block">
+                        <div class="select-wrap">
+                            <select id="list-services" name="select" placeholder=" ">
+                                <option style="display: none"></option>
+                                <option>Консультация</option>
+                                <option>Диагностика</option>
+                                <option>Ремонт</option>
+                                <option>Доставка</option>
+                                <option>Установка</option>
+                            </select>
+                            <label for="list-services" id="selectList">Выберите услугу</label>
+                            <div class="select-img"></div>
+                        </div>
+                        <span id="validateSelect"></span>
+                    </div>
+                    <div class="textarea-wrap">
+                        <textarea type="text" name="comment" id="comment" placeholder=" "></textarea>
+                        <label for="comment">Комментарий</label>
+                    </div>
+                    <div class="user-agreement--block">
+                        <p class="user-agreement">Нажимая на кнопку, Вы даете согласие на обработку
+                            <a href="#" target="_blank">персональных данных</a>
+                        </p>
+                        <button name="submit" type="submit" id="submitBtn">отправить</button>
+                    </div>
+                </form>
+                <div id="successМessage"></div>
+                <div id="result"></div>
+            </div>
+        </div>
+        <div id="result"></div>
+        <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
